@@ -91,7 +91,7 @@ int main(int argc, char *argv[])
 
 	if (vm.count("help")) {
 		std::cout <<
-			"CMF2IMF - version 1.0, build date " __DATE__ " " __TIME__ << "\n"
+			"CMF2IMF - version 1.1, build date " __DATE__ " " __TIME__ << "\n"
 			"Copyright (C) 2010 Adam Nielsen <malvineous@shikadi.net>\n"
 			"This program comes with ABSOLUTELY NO WARRANTY.  This is free software,\n"
 			"and you are welcome to change and redistribute it under certain conditions;\n"
