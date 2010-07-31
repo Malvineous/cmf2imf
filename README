@@ -1,0 +1,38 @@
+CMF2IMF conversion utility
+Copyright 2010 Adam Nielsen <malvineous@shikadi.net>
+http://www.shikadi.net/utils/cmf2imf/
+
+CMF2IMF converts Creative Labs' CMF music files into id Software's IMF format.
+It supports both type-0 and type-1 formats, as well as custom playback speeds.
+
+Usage:
+
+  # 560Hz type-0 (Commander Keen)
+  cmf2imf --speed 560 --type 0 in.cmf out.imf
+
+  # 700Hz type-1 (Wolfenstein)
+  cmf2imf --speed 700 --type 1 in.cmf out.wlf
+
+Most IMF players will treat .imf files as 560Hz and .wlf files as 700Hz.  Duke
+Nukem II files run at 280Hz.  See the ModdingWiki IMF page (link below) for
+a list of games and the speed of their IMF files.
+
+The speed is not stored in the IMF, so changing it to speed up or slow down
+the song will have no ill-effects - it just means that matching the --speed
+option to the game will cause the IMF file to play at exactly the same tempo
+as the original CMF.
+
+The utility is compiled and installed in the usual way:
+
+  ./configure && make
+  sudo make install
+
+If you downloaded the git release, run ./autogen.sh before the commands above.
+
+The program requires the libgamecommon library to be installed.  This library
+is available from http://www.shikadi.net/camoto/libgamecommon/
+
+Both the CMF and IMF formats are fully documented on the ModdingWiki - see
+http://www.shikadi.net/moddingwiki/
+
+This program is released under the GPLv3 license.
