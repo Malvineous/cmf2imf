@@ -156,6 +156,9 @@ int main(int argc, char *argv[])
 		return 2;
 	}
 
+	// Last delay in the file
+	outfile << u16le(delay);
+
 	if (type == 1) {
 		// Update the file length at the start
 		uint16_t size = outfile.tellp();
