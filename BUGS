@@ -1,0 +1,8 @@
+Known issues
+------------
+
+IMF files don't use the first channel on the OPL chip (this is reserved for
+sound effects.)  The code needs to be updated to leave this channel empty
+(apart from the init bytes.)
+
+The rhythm-mode percussion patches aren't yet loaded exactly right.
